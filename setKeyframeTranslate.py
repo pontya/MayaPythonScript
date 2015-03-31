@@ -1,5 +1,31 @@
+"""
+・概要
+キー入力の後に,タイムスライダーを1フレームずらすスクリプトです。
+キーを入れる作業中に現在のフレームを動かすのを忘れて事故が起こる事案がなくればいいな。
+
+・設定方法
+1,ホットキーエディタからsetKeyTranslateのホットキーを変更する
+
+2,ホットキーエディタにて新規→名前入力(SetKeyframeTranslate)
+3,コマンドにて言語をPythonに切り替え
+4,↓のソースコードをコマンド欄に入力
+5,適用
+
+6,新しいホットキーの割り当てから、キーに「W」を入力
+7,割り当て
+------完了-------
+
+・使い方
+既存のキー入力と同様に使えます。
+動かない場合は、ホットキーを見直そう
+
+・その他
+当スクリプトで問題が発生しても責任は取れません。
+自己責任でお使いください。
+
+"""
 import maya.cmds as cmds
 cmds.setKeyframe(attribute = 'translate')
 #現在の時間を取得
-i = cmds.currentTime(query=True)
-cmds.currentTime(i+1)
+i = cmds.currentTime(query　=　True)
+cmds.currentTime(i　+　1)
