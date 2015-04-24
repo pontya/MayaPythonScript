@@ -24,6 +24,6 @@ getCvCurvePosition = cmds.pointOnCurve(nurbsCurveNode,position=True)
 setPivotX = str(revolveNode) + '.pivotX'
 setPivotY = str(revolveNode) + '.pivotY'
 setPivotZ = str(revolveNode) + '.pivotZ'
-cmds.setAttr(setPivot,getCvCurvePosition[0])
-cmds.setAttr(setPivot,getCvCurvePosition[1])
-cmds.setAttr(setPivot,getCvCurvePosition[2])
+cmds.setAttr(setPivotX,getCvCurvePosition[0])
+cmds.setAttr(setPivotY,getCvCurvePosition[1])
+cmds.setAttr(setPivotZ,getCvCurvePosition[2])
