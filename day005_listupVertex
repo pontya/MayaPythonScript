@@ -1,0 +1,18 @@
+import maya.cmds as cmds
+
+sp = cmds.ls(sl=True)
+pos = cmds.filterExpand(sp, sm=31)
+
+list_Vertex = []
+
+#頂点の数だけ繰り返す
+for loop in pos:
+    #選択した頂点をリストで取得
+    vList = cmds.pointPosition(loop,world=True)
+    for i in range(len(vList)):
+        #取得したリストを四捨五入していくい
+        vList[i] = round(vList[i],3)
+    print(str(loop) + str(vList))
+    list_Vertex.append(vList)
+    
+print list_Vertex
